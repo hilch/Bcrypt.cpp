@@ -1,11 +1,3 @@
-# Bcrypt.cpp
-A C++ wrapper around [bcrypt](https://en.wikipedia.org/wiki/Bcrypt) (origin: Open BSD) password hashing
-
-## How to use
-
-Here an example how to use this wrapper class
-
-```cpp
 #include "bcrypt.h"
 #include <iostream>
 #include <string>
@@ -27,15 +19,3 @@ int main()
 
     return 0;
 }
-```
- 
-output:
-
-```
-Hash: $2b$10$9ngimRxnytdaWoCd4NKPneEb/9dW24/B830XpS8TbExVeGKbukYbG
-"top_secret" : 1
-"wrong" : 0
-```
-
-[check online https://bcrypt-generator.com](https://bcrypt-generator.com/)
-
