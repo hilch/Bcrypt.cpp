@@ -1,5 +1,5 @@
 # Bcrypt.cpp
-A c++ wrapper around bcrypt (origin: Open BSD) password hashing
+A c++ wrapper around [bcrypt](https://en.wikipedia.org/wiki/Bcrypt) (origin: Open BSD) password hashing
 
 ## How to use
 
