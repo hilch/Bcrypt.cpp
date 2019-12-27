@@ -4,12 +4,10 @@ INC_DIRS = ./include
 INC_FLAGS = $(addprefix -I,$(INC_DIRS))
 CPPFLAGS = $(INC_FLAGS)
 
-CFILES = $(wildcard src/*.c)
 CPPFILES = $(wildcard src/*.cpp)
-OBJFILES = $(CFILES:.c=.h) $(CPPFILES:.cpp=.o)
-OUT = libbcrypt.a
+OBJFILES = $(CPPFILES:.cpp=.o)
+OUT = libbcryptcpp.a
 
-CFILES_TEST = $(wildcard test/*.c)
 CPPFILES_TEST = $(wildcard test/*.cpp)
 OUT_TEST = test/test
 
@@ -18,13 +16,13 @@ OUT_TEST = test/test
 $(OUT): $(OBJFILES)
 	ar rcs $@ $^
 
-%.o: %.c
+%.o: %.cpp
 	$(CC) $(CPPFLAGS) -c -o $@ $^
 
 build: $(OUT)
 
 test: build
-	$(CC) $(CPPFLAGS) -L. -lbcrypt -o $(OUT_TEST) $(CFILES_TEST) $(CPPFILES_TEST)
+	$(CC) $(CPPFLAGS) -L. -o $(OUT_TEST) $(CPPFILES_TEST) -lbcryptcpp -lstdc++
 	$(OUT_TEST)
 
 clean:
