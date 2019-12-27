@@ -37,7 +37,6 @@
 		<Unit filename="src/bcrypt.cpp" />
 		<Unit filename="src/blf.h" />
 		<Unit filename="src/blowfish.cpp" />
-		<Unit filename="src/openbsd.cpp" />
 		<Unit filename="src/openbsd.h" />
 		<Unit filename="test/main.cpp" />
 		<Extensions>
