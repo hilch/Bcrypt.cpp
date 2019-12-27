@@ -1,3 +1,5 @@
+[![License](https://img.shields.io/badge/License-BSD%204--Clause-blue.svg)](https://opensource.org/licenses/BSD-4-Clause)
+
 # Bcrypt.cpp
 A C++ wrapper around [bcrypt](https://en.wikipedia.org/wiki/Bcrypt) (origin: Open BSD) password hashing
 
