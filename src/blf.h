@@ -37,7 +37,6 @@
 
 #include <cstdint>
 
-namespace bcrypt {
 
 
 /* Schneier states the maximum key length to be 56 bytes.
@@ -88,6 +87,5 @@ void blf_ecb_decrypt(blf_ctx *, uint8_t *, uint32_t);
 void blf_cbc_encrypt(blf_ctx *, uint8_t *, uint8_t *, uint32_t);
 void blf_cbc_decrypt(blf_ctx *, uint8_t *, uint8_t *, uint32_t);
 
-}
 
 #endif

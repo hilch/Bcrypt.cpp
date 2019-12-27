@@ -45,8 +45,7 @@
 #include <ctime>
 #include <string>
 
-namespace bcrypt
-{
+
 
 /* This implementation is adaptable to current computing power.
  * You can have up to 2^31 rounds which should be enough for some
@@ -416,15 +415,18 @@ bcrypt_gensalt(uint8_t log_rounds)
 
 bool init = false;
 
-std::string BCrypt::generateHash(const std::string & password , unsigned rounds)
+namespace bcrypt
+{
+
+std::string generateHash(const std::string & password, unsigned rounds)
 {
     if( !init )
     {
-     arc4random_init();
-     init = true;
+        arc4random_init();
+        init = true;
     }
 
-    char hash[61]={0};
+    char hash[61]= {0};
     int result = bcrypt_newhash( password.c_str(), rounds, hash, sizeof(hash));
 
     if( !result )
@@ -433,7 +435,7 @@ std::string BCrypt::generateHash(const std::string & password , unsigned rounds)
         return("");
 }
 
-bool BCrypt::validatePassword(const std::string & password, const std::string & hash)
+bool validatePassword(const std::string & password, const std::string & hash)
 {
     return !bcrypt_checkpass(password.c_str(), hash.c_str() );
 }

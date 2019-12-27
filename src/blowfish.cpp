@@ -41,7 +41,6 @@
 
 #include "blf.h"
 
-namespace bcrypt {
 
 /* Function for Feistel Networks */
 
@@ -674,4 +673,3 @@ blf_cbc_decrypt(blf_ctx *c, uint8_t *iva, uint8_t *data, uint32_t len)
 }
 
 
-}
