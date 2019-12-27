@@ -36,5 +36,5 @@ Hash: $2b$10$9ngimRxnytdaWoCd4NKPneEb/9dW24/B830XpS8TbExVeGKbukYbG
 "wrong" : 0
 ```
 
-[check online https://bcrypt-generator.com](https://bcrypt-generator.com/)
+You can check the hash online at [https://bcrypt-generator.com](https://bcrypt-generator.com/)
 
