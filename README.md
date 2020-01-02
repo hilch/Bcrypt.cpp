@@ -6,7 +6,7 @@ A C++ wrapper around [bcrypt](https://en.wikipedia.org/wiki/Bcrypt) (origin: Ope
 
 ## How to use
 
-Here an example how to use this wrapper class
+Here an example how to use this:
 
 ```cpp
 #include "bcrypt.h"
