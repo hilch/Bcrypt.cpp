@@ -41,3 +41,6 @@ Hash: $2b$10$9ngimRxnytdaWoCd4NKPneEb/9dW24/B830XpS8TbExVeGKbukYbG
 
 You can check the hash online at [https://bcrypt-generator.com](https://bcrypt-generator.com/)
 
+# Remarks
+
+bcrypt has a maximum password length of 72 bytes
