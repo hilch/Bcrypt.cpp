@@ -35,4 +35,8 @@ obj
 
 # IDE Files
 *.layout
+*.vscode
+
+build/
+.cache/
 
