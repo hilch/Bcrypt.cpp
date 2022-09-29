@@ -322,6 +322,8 @@ std::string bcrypt::generateHash(const std::string &password, unsigned int round
     char salt[_SALT_LEN];
 
     unsigned char seed[17]{};
+	arc4random_init();
+	
     arc4random_buf(seed, 16);
 
     bcrypt_gensalt('b', rounds, seed, salt);
