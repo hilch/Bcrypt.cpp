@@ -20,13 +20,5 @@ void arc4random_init(void)
     srand( (unsigned int) time(NULL));
 }
 
-inline
-void    explicit_bzero(void *b, size_t len)
-{
-    volatile void * dont_optimize = memset( b, 0, len );
-    dont_optimize = dont_optimize;
-}
-
-
 
 #endif // ARC4RANDOM_H_INCLUDED
