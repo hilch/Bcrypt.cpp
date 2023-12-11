@@ -9,7 +9,9 @@ int main()
     std::string password = "top_secret";
 
     std::string hash = bcrypt::generateHash(password);
+    std::cout << "Hash: " << hash << std::endl;
 
+    hash=bcrypt::generateHash(password);
     std::cout << "Hash: " << hash << std::endl;
 
     std::cout << "\"" << password << "\" : " << bcrypt::validatePassword(password,hash) << std::endl;
