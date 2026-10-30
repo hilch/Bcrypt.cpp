@@ -40,3 +40,4 @@ obj
 build/
 .cache/
 
+CMakePresets.json
