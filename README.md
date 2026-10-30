@@ -7,7 +7,7 @@ A C++ wrapper around [bcrypt](https://en.wikipedia.org/wiki/Bcrypt) (origin: Ope
 Here an example how to use this wrapper class
 
 ```cpp
-#include "bcrypt.h"
+#include <bcrypt/bcrypt.h>
 #include <iostream>
 #include <string>
 
@@ -38,6 +38,10 @@ Hash: $2b$10$9ngimRxnytdaWoCd4NKPneEb/9dW24/B830XpS8TbExVeGKbukYbG
 ```
 
 You can check the hash online at [https://bcrypt-generator.com](https://bcrypt-generator.com/)
+
+Use `<bcrypt/bcrypt.h>` to avoid a filename collision with the Windows SDK's
+`bcrypt.h`. The legacy header remains available for compatibility, but unqualified
+`bcrypt.h` includes can resolve to the SDK header depending on include search order.
 
 Former version used Open BSD as origin. Since the hash output was not fully compatible to common web services 
 we now use source from [node.bcrypt](https://github.com/kelektiv/node.bcrypt.js).
